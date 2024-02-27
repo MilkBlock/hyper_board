@@ -1,9 +1,9 @@
 mod command_args;
 mod macros;
-use std::{net::{TcpListener, TcpStream},  thread::sleep, time::Duration};
+use std::{net::{TcpStream}};
 
 use clap::Parser;
-use tungstenite::{accept, client::IntoClientRequest, stream::MaybeTlsStream, Message, WebSocket};
+use tungstenite::{stream::MaybeTlsStream, Message, WebSocket};
 
 use crate::command_args::CommandArgs;
 
@@ -30,8 +30,8 @@ fn main() {
     ws.write(Message::Text(format!("register_board:({},{})",cli.wifi,cli.ip)));
     ws.flush();
     loop{
-        let msg ={
-            let mut msg = ws.read().unwrap();
+        let _msg ={
+            let msg = ws.read().unwrap();
             if let Message::Text(text) = msg {
                 println!("receive \"{}\"",text);
                 let cmd_args = CommandArgs::parse_command(text);
