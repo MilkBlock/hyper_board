@@ -1,0 +1,2 @@
+cargo build --target=armv7-unknown-linux-musleabihf --release
+scp -oHostKeyAlgorithms=+ssh-rsa target/armv7-unknown-linux-musleabihf/release/websocket_client root@$1:/home/root/websocket_client

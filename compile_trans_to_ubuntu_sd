@@ -1,0 +1,2 @@
+cargo build --target=armv7-unknown-linux-musleabihf --release
+scp target/armv7-unknown-linux-musleabihf/release/websocket_client root@$1:/media/mineralsteins/rootfs/home/root/websocket_client

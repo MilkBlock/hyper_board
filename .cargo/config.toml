@@ -1,0 +1,7 @@
+[target.armv7-unknown-linux-gnueabihf]
+linker = "arm-linux-gnueabihf-gcc"
+
+[target.armv7-unknown-linux-musleabihf]
+linker="arm-linux-musleabihf-gcc"
+# 或者执行这个也行
+# rustflags = ["-C","linker=/usr/arm-linux-musleabihf-cross/arm-linux-musleabihf/bin/ld"]

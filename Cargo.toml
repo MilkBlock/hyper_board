@@ -1,0 +1,13 @@
+[package]
+name = "websocket_board"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[target.armv7-unknown-linux-gnueabihf]
+linker = "arm-linux-gnueabihf-gcc"
+
+[dependencies]
+clap = { version = "4.4.6", features = ["derive"] }
+tungstenite = "0.20.1"
