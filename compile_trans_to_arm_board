@@ -1,0 +1,3 @@
+cargo build --target=armv7-unknown-linux-musleabihf --release
+ssh -oHostKeyAlgorithms=+ssh-rsa $1@$2 "bash /home/root/kill_ws"
+scp -oHostKeyAlgorithms=+ssh-rsa target/armv7-unknown-linux-musleabihf/release/websocket_board $1@$2:/home/$1/websocket_client_new

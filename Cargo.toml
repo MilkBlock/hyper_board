@@ -9,5 +9,11 @@ edition = "2021"
 linker = "arm-linux-gnueabihf-gcc"
 
 [dependencies]
+bytemuck = "1.15.0"
 clap = { version = "4.4.6", features = ["derive"] }
-tungstenite = "0.20.1"
+futures = "0.3.30"
+futures-util = "0.3.30"
+linux-embedded-hal = "0.4.0"
+slab = "0.4.9"
+tokio = { version = "1.0.0", features = ["full"] }
+tokio-tungstenite = "0.21.0"
